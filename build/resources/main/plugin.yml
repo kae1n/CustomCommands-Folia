@@ -2,6 +2,7 @@ name: CustomCommands
 version: 1.0.0
 main: com.example.customcommands.CustomCommandsPlugin
 api-version: '1.20'
+folia-supported: true
 description: Simple test plugin
 author: Test
 commands:
