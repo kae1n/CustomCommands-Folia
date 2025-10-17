@@ -1,0 +1,26 @@
+name: CustomCommands
+version: 1.0.0
+main: com.example.customcommands.CustomCommandsPlugin
+api-version: '1.20'
+description: Simple test plugin
+author: Test
+commands:
+  coin:
+    description: Подбросить монетку
+    usage: /coin
+  dice:
+    description: Бросить кубик (по умолчанию d6)
+    usage: /dice [грани]
+    aliases: [roll]
+  do:
+    description: Сообщить об окружении/событии
+    usage: /do <действие>
+  me:
+    description: Описать действие от третьего лица
+    usage: /me <действие>
+  try:
+    description: Попытаться выполнить действие с результатом
+    usage: /try <действие>
+  whisper:
+    description: Шепнуть игроку сообщение
+    usage: /whisper <игрок> <сообщение>
