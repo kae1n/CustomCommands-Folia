@@ -7,18 +7,22 @@ version = '1.1.0'
 
 repositories {
     mavenCentral()
-    maven { 
-        url = 'https://repo.papermc.io/repository/maven-public/' 
+    maven {
+        url = 'https://repo.papermc.io/repository/maven-public/'
+    }
+    maven {
+        url = 'https://jitpack.io'
     }
 }
 
 dependencies {
-    compileOnly 'io.papermc.paper:paper-api:1.20.4-R0.1-SNAPSHOT'
+    compileOnly 'io.papermc.paper:paper-api:1.20.6-R0.1-SNAPSHOT'
+    // Gsit будет опциональной зависимостью - плагин работает и без него
 }
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
+        languageVersion = JavaLanguageVersion.of(25)
     }
 }
 

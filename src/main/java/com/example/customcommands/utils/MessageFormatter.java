@@ -44,4 +44,27 @@ public class MessageFormatter {
                 .append(Component.text(message)
                         .color(TextColor.color(0xFFFFFF)));
     }
+    
+    public static Component formatPermissionDenied(String reason) {
+        return Component.text(reason)
+                .color(TextColor.color(0xFF5555))
+                .decorate(TextDecoration.BOLD);
+    }
+    
+    public static Component formatCreativeProtection(String targetName) {
+        return Component.text("Нельзя красть у " + targetName + " (креативный режим)!")
+                .color(TextColor.color(0xFF5555))
+                .decorate(TextDecoration.BOLD);
+    }
+    
+    public static Component formatThiefMessage(String message, TextColor color) {
+        return Component.text(message)
+                .color(color)
+                .decorate(TextDecoration.BOLD);
+    }
+    
+    public static Component formatStealAttempt(String thiefName, String targetName) {
+        return Component.text("[" + thiefName + " пытается украсть у " + targetName + "]")
+                .color(TextColor.color(0xFFAA00));
+    }
 }

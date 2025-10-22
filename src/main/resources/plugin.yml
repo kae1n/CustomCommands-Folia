@@ -1,9 +1,8 @@
 name: CustomCommands
-version: 1.0.0
+version: 1.1.0
 main: com.example.customcommands.CustomCommandsPlugin
-api-version: '1.20'
-folia-supported: true
-description: Simple test plugin
+api-version: '1.21'
+description: Simple test plugin with thief mode for Paper
 author: Test
 commands:
   coin:
@@ -25,3 +24,25 @@ commands:
   whisper:
     description: Шепнуть игроку сообщение
     usage: /whisper <игрок> <сообщение>
+  mthief:
+    description: Включить режим вора
+    usage: /mthief
+  mofth:
+    description: Выключить режим вора
+    usage: /mofth
+  unloadclcc:
+    description: Сбросить cooldown кражи игроку
+    usage: /unloadclcc <игрок>
+permissions:
+  customcommands.thief.mode:
+    description: Позволяет использовать режим вора
+    default: true
+  customcommands.thief.steal:
+    description: Позволяет красть предметы
+    default: true
+  customcommands.thief.steal_creative:
+    description: Позволяет красть у игроков в креативном режиме
+    default: false
+  customcommands.admin.reset_cooldown:
+    description: Позволяет сбрасывать cooldown кражи
+    default: op
